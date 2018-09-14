@@ -15,4 +15,6 @@
 
 `packer build template.json`
 
-### Nginx is built-in
+### Nginx is built-in using script:
+
+[nginx.sh](https://github.com/achuchulev/packer-aws_nginx/blob/master/nginx.sh)
