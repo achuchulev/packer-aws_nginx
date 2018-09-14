@@ -3,8 +3,8 @@
 # check if nginx is installed
 # install nginx if it's not
 
+# check if nginx is installed
 which nginx || {
-sudo yum update
-sudo yum install epel-release
-sudo yum install nginx
+sudo apt-get update
+sudo apt-get install -y nginx
 }
