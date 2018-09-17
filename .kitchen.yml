@@ -1,0 +1,26 @@
+driver:
+  name: ec2
+  aws_ssh_key_id: atanasc
+  security_group_ids: ["sg-0e3a153ccaa3977cd"]
+  region: us-east-2
+  availability_zone: b
+  subnet_id: "subnet-8a9f0ff0"
+  instance_type: t2.micro
+  associate_public_ip: true
+ 
+transport:
+  ssh_key: "~/.ssh/id_rsa"
+  connection_timeout: 10
+  connection_retries: 5
+  username: ubuntu
+
+ platforms:
+  - name: ubuntu-14.04
+    driver:
+      image_id: ami-0daad02ff4ba87139
+
+ verifier:
+  name: inspec
+
+suites:
+  - name: default
