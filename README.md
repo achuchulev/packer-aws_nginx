@@ -32,17 +32,12 @@
  * To install the gems run:
 
  `gem install aws-sdk`
+ 
  `gem install ec2`
 
-### Check if the instance is found
+### Verify that the instance is found
 
-* Run `kitchen list`
-
- * Output shold look like this: 
- 
- Instance             Driver  Provisioner  Verifier  Transport  Last Action    Last Error
- 
- default-ubuntu-1404  Ec2     ChefSolo     Inspec    Ssh        <Not Created>  <None>
+  `kitchen list`
  
  ### Run the test
  
