@@ -27,11 +27,11 @@ packer validate template.json
 packer build template.json
 ```
 
-* Packer Template: [template.json](https://github.com/achuchulev/packer-aws_nginx/blob/master/template.json)
+* packer template: [template.json](https://github.com/achuchulev/packer-aws_nginx/blob/master/template.json)
 
-* Nginx deploy script: [nginx.sh](https://github.com/achuchulev/packer-aws_nginx/blob/master/nginx.sh)
+* nginx deploy script: [nginx.sh](https://github.com/achuchulev/packer-aws_nginx/blob/master/nginx.sh)
 
-* Kitchen-ec2 checks: [nginx_check.rb](https://github.com/achuchulev/packer-aws_nginx/blob/master/test/integration/default/nginx_check.rb)
+* kitchen-ec2 checks: [nginx_check.rb](https://github.com/achuchulev/packer-aws_nginx/blob/master/test/integration/default/nginx_check.rb)
 
 ## Test the AMI
 
