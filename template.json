@@ -20,7 +20,7 @@
      "most_recent": true
     },
     "ssh_username": "ubuntu",
-    "ami_name": "packer-aws-nginx-{{timestamp}}"
+    "ami_name": "xenial-nginx-{{timestamp}}"
   }
   ],
   "provisioners": [
