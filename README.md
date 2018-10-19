@@ -1,4 +1,4 @@
-# Example of new AMI creation on AWS with Packer that have nginx built-in. A kitchen-ec2 test is included
+# Create AMI on AWS with Packer that have nginx built-in. A kitchen-ec2 test is included
 
 ### Prerequisits
 
