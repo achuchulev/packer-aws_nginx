@@ -37,7 +37,7 @@ packer build template.json
 
 ### Prerequisits
 
-* Existing AWS key pair
+* Update _.kitchen.yml_ configuration file with the name of your existing AWS key pair
 
 `aws_ssh_key_id: <the_name_of_your_aws_key_pair>`
 
