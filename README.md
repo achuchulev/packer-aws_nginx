@@ -31,7 +31,6 @@ packer build template.json
 
 * nginx deploy script: [nginx.sh](https://github.com/achuchulev/packer-aws_nginx/blob/master/nginx.sh)
 
-* kitchen-ec2 checks: [nginx_check.rb](https://github.com/achuchulev/packer-aws_nginx/blob/master/test/integration/default/nginx_check.rb)
 
 ## Test the AMI
 
@@ -53,3 +52,6 @@ gem install ec2
 Run `kitchen list` to verify that AMI is ready to be tested
 
 Run `kitchen test` to check that nginx server is installed
+
+
+* kitchen-ec2 checks: [nginx_check.rb](https://github.com/achuchulev/packer-aws_nginx/blob/master/test/integration/default/nginx_check.rb)
