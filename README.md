@@ -39,7 +39,7 @@ packer build template.json
 
 * Update _.kitchen.yml_ configuration file with the name of your existing AWS key pair
 
-`aws_ssh_key_id: <the_name_of_your_aws_key_pair>`
+`aws_ssh_key_id: put_the_name_of_your_aws_key_pair`
 
 * You will need to install EC2 drivers and the AWS SDK for Ruby v2
 
