@@ -19,10 +19,17 @@ export AWS_SECRET_ACCESS_KEY=MYSECRETACCESSKEY
 
 ## Bake AMI
 
-Go to the directory containing template.json file, and run:
+* Go to the directory containing template.json file:
+
+`cd packer-aws_nginx/`
+
+* Update _template.json_ to specify the AWS region where the AMI is going to be stored
+
+`"region": "us-east-2"`
+
+* start build:
 
 ```
-cd packer-aws_nginx/
 packer validate template.json
 packer build template.json
 ```
@@ -46,7 +53,11 @@ packer build template.json
 gem install aws-sdk
 gem install ec2
 ```
- 
+
+* Update _.kitche.yml_ to specify the AWS region where the AMI has been created
+
+`region: us-east-2`
+
 ### Run test
 
 Run `kitchen list` to verify that AMI is ready to be tested
