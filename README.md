@@ -17,7 +17,7 @@ export AWS_SECRET_ACCESS_KEY=MYSECRETACCESSKEY
 
 `git clone https://github.com/achuchulev/packer-aws_nginx.git`
 
-## Build new AMI
+## Bake AMI
 
 Go to the directory containing template.json file, and run:
 
