@@ -6,18 +6,18 @@
 * kitchen
 * AWS account
 
-### Export your AWS access and security keys as environment variables:
+## Bake AMI
+
+Export your AWS access and security keys as environment variables:
 
 ```
 export AWS_ACCESS_KEY_ID=MYACCESSKEYID
 export AWS_SECRET_ACCESS_KEY=MYSECRETACCESSKEY
 ```
- 
-### Clone repository locally:
+
+Clone repository locally:
 
 `git clone https://github.com/achuchulev/packer-aws_nginx.git`
-
-## Bake AMI
 
 Go to the directory containing template.json file:
 
