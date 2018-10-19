@@ -6,7 +6,7 @@
 * kitchen
 * AWS account
 
-### Set your access key and id as environment variables, so we don't need to pass them in through the command line:
+### Export your AWS access and security keys as environment variables:
 
 ```
 export AWS_ACCESS_KEY_ID=MYACCESSKEYID
@@ -34,6 +34,10 @@ packer build template.json
 ### Nginx deploy script:
 
 [nginx.sh](https://github.com/achuchulev/packer-aws_nginx/blob/master/nginx.sh)
+
+### Kitchen-ec2 test controls
+
+[nginx_check.rb](https://github.com/achuchulev/packer-aws_nginx/blob/master/test/integration/default/nginx_check.rb)
 
 ## Test the AMI
 
