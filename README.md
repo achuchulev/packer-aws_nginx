@@ -61,7 +61,7 @@ region: us-east-2
 
 Run `kitchen list` to verify that AMI is ready to be tested
 
-Run `kitchen test` to check that nginx server is installed
+Run `kitchen test` to check that nginx server is installed, nginx service is enabled and running, default port is tcp 80, configuration file exists at the default location, has right permissions and is owned by root
 
 
 * kitchen-ec2 checks: [nginx_check.rb](https://github.com/achuchulev/packer-aws_nginx/blob/master/test/integration/default/nginx_check.rb)
