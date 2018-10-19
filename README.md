@@ -1,8 +1,9 @@
-# Example of new AMI creation on AWS with Packer that have nginx built-in. A test with kitchen is included to verfy that nginx is present on that box
+# Example of new AMI creation on AWS with Packer that have nginx built-in. A kitchen-ec2 test is included
 
 ### Prerequisits
 
 * packer
+* kitchen
 * AWS account
 
 ### Set your access key and id as environment variables, so we don't need to pass them in through the command line:
@@ -11,34 +12,35 @@
  
  `export AWS_SECRET_ACCESS_KEY=MYSECRETACCESSKEY`
 
-### Build new AMI with command:
+## Build the new AMI
 
 `packer build template.json`
 
-### Nginx is built-in using script:
+### Packer Template:
+
+[template.json](https://github.com/achuchulev/packer-aws_nginx/blob/master/template.json)
+
+### Nginx deploy script:
 
 [nginx.sh](https://github.com/achuchulev/packer-aws_nginx/blob/master/nginx.sh)
 
-## Test box to verify that nginx package is installed
+## Test the AMI
 
-### What you will need
+### Prerequisits
 
-* AWS key pair
- * Use that name for the parameter aws_ssh_key_id: <the_name_of_aws_key_pair>
+* Existing AWS key pair
 
-* kitchen
+`aws_ssh_key_id: <the_name_of_your_aws_key_pair>`
 
 * You will need to install EC2 drivers and the AWS SDK for Ruby v2
- * To install the gems run:
 
- `gem install aws-sdk`
+```
+gem install aws-sdk
+gem install ec2
+```
  
- `gem install ec2`
+### Run test
 
-### Verify that the instance is found
+Run `kitchen list` to verify that AMI is ready to be tested
 
-  `kitchen list`
- 
- ### Run the test
- 
-  `kitchen test`
+Run `kitchen test` to check that nginx server is installed
