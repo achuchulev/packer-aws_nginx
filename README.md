@@ -11,10 +11,20 @@
  `export AWS_ACCESS_KEY_ID=MYACCESSKEYID`
  
  `export AWS_SECRET_ACCESS_KEY=MYSECRETACCESSKEY`
+ 
+### Clone repository locally:
 
-## Build the new AMI
+`git clone https://github.com/achuchulev/packer-aws_nginx.git`
 
-`packer build template.json`
+## Build new AMI
+
+Go to the directory containing template.json file, and run:
+
+```
+cd packer-aws_nginx/
+packer validate template.json
+packer build template.json
+```
 
 ### Packer Template:
 
