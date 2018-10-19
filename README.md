@@ -43,18 +43,18 @@ packer build template.json
 
 ### Prerequisits
 
-#### Update _.kitchen.yml_ configuration file with the name of your existing AWS key pair and the AWS region where the AMI has been created
-
-```
-aws_ssh_key_id: put_the_name_of_your_aws_key_pair
-region: us-east-2
-```
-
-### You will need to install EC2 drivers and the AWS SDK for Ruby v2
+* You will need to install EC2 drivers and the AWS SDK for Ruby v2
 
 ```
 gem install aws-sdk
 gem install ec2
+```
+
+* Update _.kitchen.yml_ configuration file with the name of your existing AWS key pair and the AWS region where the AMI has been created
+
+```
+aws_ssh_key_id: put_the_name_of_your_aws_key_pair
+region: us-east-2
 ```
 
 ### Run test
