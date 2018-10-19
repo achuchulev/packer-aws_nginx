@@ -8,26 +8,26 @@
 
 ## Bake AMI
 
-Export your AWS access and security keys as environment variables:
+#### Export your AWS access and security keys as environment variables:
 
 ```
 export AWS_ACCESS_KEY_ID=MYACCESSKEYID
 export AWS_SECRET_ACCESS_KEY=MYSECRETACCESSKEY
 ```
 
-Clone repository locally:
+#### Clone repository locally:
 
 `git clone https://github.com/achuchulev/packer-aws_nginx.git`
 
-Go to the directory containing template.json file:
+#### Go to the directory containing template.json file:
 
 `cd packer-aws_nginx/`
 
-Update _template.json_ to specify the AWS region where the AMI is going to be stored
+#### Update _template.json_ to specify the AWS region where the AMI is going to be stored
 
 `"region": "us-east-2"`
 
-Start build:
+### Start build:
 
 ```
 packer validate template.json
@@ -43,14 +43,14 @@ packer build template.json
 
 ### Prerequisits
 
-Update _.kitchen.yml_ configuration file with the name of your existing AWS key pair and the AWS region where the AMI has been created
+#### Update _.kitchen.yml_ configuration file with the name of your existing AWS key pair and the AWS region where the AMI has been created
 
 ```
 aws_ssh_key_id: put_the_name_of_your_aws_key_pair
 region: us-east-2
 ```
 
-* You will need to install EC2 drivers and the AWS SDK for Ruby v2
+### You will need to install EC2 drivers and the AWS SDK for Ruby v2
 
 ```
 gem install aws-sdk
