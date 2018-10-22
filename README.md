@@ -23,7 +23,7 @@ export AWS_SECRET_ACCESS_KEY=MYSECRETACCESSKEY
 
 `cd packer-aws_nginx/`
 
-#### Update _template.json_ to specify the AWS region where the AMI is going to be stored
+#### Update _template.json_ to specify the AWS region where the AMI is going to be used
 
 `"region": "us-east-2"`
 
