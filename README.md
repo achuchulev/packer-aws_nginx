@@ -1,6 +1,6 @@
 # Bake AMI on AWS with Packer that have nginx built-in. A kitchen-ec2 test is included
 
-### Prerequisits
+### Prerequisites
 
 * packer
 * kitchen
@@ -41,7 +41,7 @@ packer build template.json
 
 ## Test the AMI
 
-### Prerequisits
+### Prerequisites
 
 * You will need to install EC2 drivers and the AWS SDK for Ruby v2
 
