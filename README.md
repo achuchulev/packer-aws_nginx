@@ -23,7 +23,7 @@ export AWS_SECRET_ACCESS_KEY=MYSECRETACCESSKEY
 
 `cd packer-aws_nginx/`
 
-#### Update _template.json_ to specify the AWS region where the AMI is going to be used
+#### Update _[template.json](https://github.com/achuchulev/packer-aws_nginx/blob/master/template.json)_ to specify the AWS region where the AMI is going to be used
 
 `"region": "us-east-2"`
 
@@ -33,11 +33,6 @@ export AWS_SECRET_ACCESS_KEY=MYSECRETACCESSKEY
 packer validate template.json
 packer build template.json
 ```
-
-* packer template: [template.json](https://github.com/achuchulev/packer-aws_nginx/blob/master/template.json)
-
-* nginx deploy script: [nginx.sh](https://github.com/achuchulev/packer-aws_nginx/blob/master/nginx.sh)
-
 
 ## Test the AMI
 
@@ -50,7 +45,7 @@ gem install aws-sdk
 gem install ec2
 ```
 
-* Update _.kitchen.yml_ configuration file with the name of your existing AWS key pair and the AWS region where the AMI has been created
+* Update _[.kitchen.yml](https://github.com/achuchulev/packer-aws_nginx/blob/master/.kitchen.yml)_ configuration file with the name of your existing AWS key pair and the AWS region where the AMI has been created
 
 ```
 aws_ssh_key_id: put_the_name_of_your_aws_key_pair
