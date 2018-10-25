@@ -38,6 +38,13 @@ packer build template.json
 
 to check that nginx server is installed, nginx service is enabled and running, default port is tcp 80, configuration file exists at the default location, has right permissions and is owned by root
 
+* Update _.kitchen.yml_ file with the name of your existing AWS key pair and the AWS region where the AMI has been created
+
+```
+aws_ssh_key_id: put_the_name_of_your_aws_key_pair
+region: us-east-2
+```
+
 ### on Linux
 
 #### Prerequisites
@@ -49,13 +56,6 @@ gem install test-kitchen
 gem install kitchen-inspec
 gem install aws-sdk
 gem install ec2
-```
-
-* Update _[.kitchen.yml](https://github.com/achuchulev/packer-aws_nginx/blob/master/.kitchen.yml)_ configuration file with the name of your existing AWS key pair and the AWS region where the AMI has been created
-
-```
-aws_ssh_key_id: put_the_name_of_your_aws_key_pair
-region: us-east-2
 ```
 
 #### Run test
