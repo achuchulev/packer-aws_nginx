@@ -36,11 +36,17 @@ packer build template.json
 
 ## Test the AMI
 
-### Prerequisites
+to check that nginx server is installed, nginx service is enabled and running, default port is tcp 80, configuration file exists at the default location, has right permissions and is owned by root
 
-* You will need to install EC2 drivers and the AWS SDK for Ruby v2
+### on Linux
+
+#### Prerequisites
+
+* You will need to install EC2 drivers and the AWS SDK for Ruby
 
 ```
+gem install test-kitchen
+gem install kitchen-inspec
 gem install aws-sdk
 gem install ec2
 ```
@@ -52,11 +58,42 @@ aws_ssh_key_id: put_the_name_of_your_aws_key_pair
 region: us-east-2
 ```
 
-### Run test
+#### Run test
 
-Run `kitchen list` to verify that AMI is ready to be tested
+Run `kitchen test` 
 
-Run `kitchen test` to check that nginx server is installed, nginx service is enabled and running, default port is tcp 80, configuration file exists at the default location, has right permissions and is owned by root
+### on MAC
 
+#### Prerequisit
 
-* kitchen-ec2 checks: [nginx_check.rb](https://github.com/achuchulev/packer-aws_nginx/blob/master/test/integration/default/nginx_check.rb)
+##### Install rbenv to use ruby version 2.3.1
+
+```
+brew install rbenv
+rbenv install 2.3.1
+rbenv local 2.3.1
+rbenv versions
+```
+
+##### Add the following lines to your ~/.bash_profile:
+
+```
+eval "$(rbenv init -)"
+true
+export PATH="$HOME/.rbenv/bin:$PATH"
+```
+
+##### Reload profile: 
+
+`source ~/.bash_profile`
+
+##### Install bundler
+
+```
+gem install bundler
+bundle install
+```
+
+#### Run the test: 
+
+`bundle exec kitchen test`
