@@ -26,7 +26,18 @@
   "provisioners": [
    {
     "type": "shell",
-    "script": "./nginx.sh"
-    }
+    "execute_command": "sudo env {{ .Vars }} {{ .Path }}",
+    "scripts": [
+      "scripts/update.sh",
+      "scripts/motd.sh",
+      "scripts/packages.sh",
+      "scripts/nginx.sh",
+      "scripts/cfssl.sh",
+      "scripts/certbot.sh",
+      "scripts/minimize.sh",
+      "scripts/cleanup.sh"
+     ],
+    "expect_disconnect": true
+   }
   ]
 }
