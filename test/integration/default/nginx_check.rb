@@ -34,3 +34,27 @@ control 'nginx-tls' do
     its('support_info') { should match /TLS/ }
   end
 end
+
+control 'certbot-package' do
+  describe package('certbot') do
+    it { should be_installed }
+  end
+end
+
+control 'cfssl' do
+  describe file('/usr/local/bin/cfssl') do
+    it { should exist }
+    its('owner') { should eq 'root' }
+    its('mode') { should cmp '420' }
+  end
+  describe file('/usr/local/bin/cfssl-certinfo') do
+    it { should exist }
+    its('owner') { should eq 'root' }
+    its('mode') { should cmp '420' }
+  end
+  describe file('/usr/local/bin/cfssljson') do
+    it { should exist }
+    its('owner') { should eq 'root' }
+    its('mode') { should cmp '420' }
+  end
+end
