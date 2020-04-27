@@ -4,12 +4,13 @@
     "aws_secret_key": "{{env `AWS_SECRET_ACCESS_KEY`}}",
     "region": "us-east-1"
   },
-  "builders": [{
+  "builders": [
+   {
     "type": "amazon-ebs",
     "access_key": "{{user `aws_access_key`}}",
     "secret_key": "{{user `aws_secret_key`}}",
     "region": "{{user `region`}}",
-    "instance_type": "t2.micro",
+    "instance_type": "a1.medium",
     "source_ami_filter": {
       "filters": {
       "virtualization-type": "hvm",
@@ -21,7 +22,7 @@
     },
     "ssh_username": "ubuntu",
     "ami_name": "bionic-nginx-{{timestamp}}"
-  }
+   }
   ],
   "provisioners": [
    {
